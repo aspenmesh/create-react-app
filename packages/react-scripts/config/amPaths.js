@@ -1,9 +1,11 @@
+'use strict';
+
 const SAAS = 'SAAS';
 const SELF_HOSTED = 'SELF_HOSTED';
 const SAAS_DIR = 'saas';
 const SELF_HOSTED_DIR = 'self-hosted';
 
-const getAppIndex = () => {
+const getComponentRoot = () => {
   if (process.env.LOCATION === SAAS) {
     return `src/root/${SAAS_DIR}/index`;
   }
@@ -19,5 +21,5 @@ const getAppIndex = () => {
 };
 
 module.exports = {
-  appIndexJs: getAppIndex(),
+  componentRoot: getComponentRoot(),
 };
