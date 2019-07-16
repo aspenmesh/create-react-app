@@ -18,6 +18,6 @@ const getAppIndex = () => {
   );
 };
 
-export default {
+module.exports = {
   appIndexJs: getAppIndex(),
 };
