@@ -104,7 +104,7 @@ module.exports = {
   appBuild: resolveApp('build'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveModule(resolveApp, 'src/index'),
+  appIndexJs: resolveModule(resolveApp, customAmPaths.componentRoot),
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),
@@ -156,7 +156,6 @@ if (
     ownNodeModules: resolveOwn('node_modules'),
     appTypeDeclarations: resolveOwn(`${templatePath}/src/react-app-env.d.ts`),
     ownTypeDeclarations: resolveOwn('lib/react-app.d.ts'),
-    ...customAmPaths,
   };
 }
 // @remove-on-eject-end
